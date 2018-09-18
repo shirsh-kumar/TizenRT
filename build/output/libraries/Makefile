@@ -57,6 +57,12 @@ all:
 depend:
 
 clean:
+	mkdir -p backup
+	#Add your library here
+	mv libfota.a backup
+	######################
 	$(call CLEAN)
+	cp backup/* ./
+	rm -rf backup
 
 distclean: clean

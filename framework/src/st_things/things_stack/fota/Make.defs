@@ -16,7 +16,7 @@
 #
 ###########################################################################
 
-CSRCS += fmwup_api.c fmwup_util_data.c fmwup_util_http.c fmwup_util_internal.c
+CSRCS += fmwup_util_data.c fmwup_util_internal.c
 
 DEPPATH += --dep-path src/st_things/things_stack/fota
 VPATH += :src/st_things/things_stack/fota

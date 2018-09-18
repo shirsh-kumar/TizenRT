@@ -112,6 +112,9 @@ TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libmbedx509$(LIBEXT)
 TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libmbedtls$(LIBEXT)
 TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libmbedcrypto$(LIBEXT)
 endif
+ifeq ($(CONFIG_FOTA_LIB),y)
+TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libfota$(LIBEXT)
+endif
 endif
 
 # Add libraries for audio module

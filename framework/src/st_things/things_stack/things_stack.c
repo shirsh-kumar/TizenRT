@@ -54,7 +54,7 @@
 #include "cloud/cloud_evtpend.h"
 
 #ifdef CONFIG_ST_THINGS_FOTA
-#include "fota/fmwup_api.h"
+#include "fota/fmwup_util_internal.h"
 #include "deviceDef.h"
 #define DEVICE_DEF_FILE_ROOT PATH_MNT
 #else
@@ -456,7 +456,7 @@ GOTO_OUT:
 int things_stop_stack(void)
 {
 	THINGS_LOG_D(TAG, THINGS_FUNC_ENTRY);
-	pthread_mutex_lock(&g_things_stop_mutex);	
+	pthread_mutex_lock(&g_things_stop_mutex);
 	pthread_mutex_lock(&m_thread_oic_reset);
 
 	if (b_thread_things_reset == true) {

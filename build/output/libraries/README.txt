@@ -10,6 +10,7 @@ If you want to add pre-built libraries into TinyAra binary,
 please refer belows.
 
 1. place your libraries at build/output/libraries folder
+
 2. modify mk files to add them to binary
 
   < Files >
@@ -23,4 +24,20 @@ please refer belows.
    USERLIBS += $(LIBRARIES_DIR)$(DELIM)<File name of Library>$(LIBEXT)
    You should replace <File name of Library> to yours.
 
-3. build the TinyAra
+3. modify .gitignore file to add entry for your library to track changes
+
+  < Files >
+   build/output/libraries/.gitignore
+
+  < Contents to modify >
+   !<LIBNAME>
+
+4. modify Makefile to add entry to retain your library in case of "make clean"
+
+  < Files >
+   build/output/libraries/Makefile
+
+  < Contents to modify >
+   mv <LIBNAME> backup
+
+5. build the TinyAra

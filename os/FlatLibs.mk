@@ -106,6 +106,10 @@ TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libroutingmanager$(LIBEXT)
 ifeq ($(CONFIG_ENABLE_IOTIVITY_CLOUD),y)
 TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libresource_directory$(LIBEXT)
 endif
+ifeq ($(CONFIG_FOTA_LIB),y)
+TINYARALIBS += $(LIBRARIES_DIR)$(DELIM)libfota$(LIBEXT)
+endif
+
 endif
 
 # Add libraries for power management module

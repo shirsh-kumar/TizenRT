@@ -1,1 +1,4 @@
 /*.lib
+
+#Add your library here
+!libfota.a

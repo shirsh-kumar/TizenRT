@@ -20,7 +20,7 @@
 #include <json/cJSON.h>
 #include <stdlib.h>
 #include "fmwup_util_data.h"
-#include "fmwup_api.h"
+#include <fota_api/fmwup_api.h>
 
 #include "utils/things_malloc.h"
 #include "utils/things_string.h"
@@ -89,7 +89,7 @@ int key_manager_init()
 		} else {
 			THINGS_LOG_D(TAG, "cJSON_Parse is true.");
 		}
-		things_free(json_str);		
+		things_free(json_str);
 	} else {
 		THINGS_LOG_D(TAG, "KEY_MANAGER_FILE_NAME is empty.");
 		is_valid = 0;

@@ -25,9 +25,8 @@
 #include "things_api.h"
 
 #ifdef CONFIG_ST_THINGS_FOTA
-#include "fota/fmwup_api.h"
+#include "fota/fmwup_util_internal.h"
 #endif
-
 #define ES_ENROLLEE_TAG "[easysetup]"
 
 static bool g_is_secured = false;

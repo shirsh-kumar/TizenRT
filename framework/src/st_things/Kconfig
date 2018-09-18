@@ -65,4 +65,11 @@ config ST_THINGS_FOTA
 	default n
 	---help---
 		Enable a FOTA service for ST Things
+
+config FOTA_LIB
+	bool "Enable FOTA Library usage"
+	depends on ST_THINGS_FOTA
+	default y
+	---help---
+		Enable FOTA Library usage
 endif # ST_THINGS
